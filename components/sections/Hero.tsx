@@ -1,44 +1,44 @@
-'use client'
-import { useState, useEffect, useCallback } from 'react'
-import { motion } from 'framer-motion'
-import { cn } from '@/lib/utils'
-import { useLang } from '@/context/LangContext'
-import { siteConfig } from '@/config/site'
-import { SmartText } from '@/components/ui/SmartText'
-import { MagneticButton } from '@/components/ui/MagneticButton'
+"use client";
+import { useState, useEffect, useCallback } from "react";
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
+import { useLang } from "@/context/LangContext";
+import { siteConfig } from "@/config/site";
+import { SmartText } from "@/components/ui/SmartText";
+import { MagneticButton } from "@/components/ui/MagneticButton";
 
-const VERB_INTERVAL = 2500
+const VERB_INTERVAL = 2500;
+
+const fadeUp = {
+  initial: { opacity: 0, y: 24 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, margin: "-80px" as const },
+};
 
 export function Hero() {
-  const { lang, t } = useLang()
-  const [verbIndex, setVerbIndex] = useState(0)
-  const [isAnimating, setIsAnimating] = useState(false)
+  const { lang, t } = useLang();
+  const [verbIndex, setVerbIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
 
-  const verbs = siteConfig.hero.verbs
-  const currentVerb = verbs[verbIndex][lang]
+  const verbs = siteConfig.hero.verbs;
+  const currentVerb = verbs[verbIndex][lang];
 
   const rotateVerb = useCallback(() => {
-    setIsAnimating(true)
+    setIsAnimating(true);
     setTimeout(() => {
-      setVerbIndex((prev) => (prev + 1) % verbs.length)
-      setIsAnimating(false)
-    }, 300)
-  }, [verbs.length])
+      setVerbIndex((prev) => (prev + 1) % verbs.length);
+      setIsAnimating(false);
+    }, 300);
+  }, [verbs.length]);
 
   useEffect(() => {
-    const interval = setInterval(rotateVerb, VERB_INTERVAL)
-    return () => clearInterval(interval)
-  }, [rotateVerb])
+    const interval = setInterval(rotateVerb, VERB_INTERVAL);
+    return () => clearInterval(interval);
+  }, [rotateVerb]);
 
   // Build headline with rotating verb replacing the [token]
-  const headlineTemplate = t(siteConfig.hero.headline)
-  const headlineParts = headlineTemplate.split(/\[([^\]]+)\]/)
-
-  const fadeUp = {
-    initial: { opacity: 0, y: 24 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true, margin: '-80px' as const },
-  }
+  const headlineTemplate = t(siteConfig.hero.headline);
+  const headlineParts = headlineTemplate.split(/\[([^\]]+)\]/);
 
   return (
     <section className="relative min-h-screen flex items-center justify-center px-[clamp(1.5rem,5vw,4rem)]">
@@ -66,19 +66,19 @@ export function Hero() {
                 <span
                   key={i}
                   className={cn(
-                    'inline-block bg-linear-to-r from-lime-400 to-emerald-500',
-                    'bg-clip-text text-transparent',
-                    'drop-shadow-[0_0_12px_rgba(34,197,94,0.4)]',
-                    'transition-all duration-300',
-                    isAnimating && 'opacity-0 translate-y-1'
+                    "inline-block bg-linear-to-r from-lime-400 to-emerald-500",
+                    "bg-clip-text text-transparent",
+                    "drop-shadow-[0_0_12px_rgba(34,197,94,0.4)]",
+                    "transition-all duration-300",
+                    isAnimating && "opacity-0 translate-y-1",
                   )}
-                  style={{ minWidth: '2ch' }}
+                  style={{ minWidth: "2ch" }}
                 >
                   {currentVerb}
                 </span>
-              )
+              );
             }
-            return <span key={i}>{part}</span>
+            return <span key={i}>{part}</span>;
           })}
         </motion.h1>
 
@@ -105,10 +105,10 @@ export function Hero() {
             strength={0.4}
             href="#initiatives"
             className={cn(
-              'rounded-full px-7 py-3.5',
-              'bg-lime-500 text-black',
-              'font-heading text-[13px] font-medium uppercase tracking-wider',
-              'hover:bg-lime-400 hover:scale-[1.03] transition-all duration-200'
+              "rounded-full px-7 py-3.5",
+              "bg-lime-500 text-black",
+              "font-heading text-[13px] font-medium uppercase tracking-wider",
+              "hover:bg-lime-400 hover:scale-[1.03] transition-all duration-200",
             )}
           >
             {t(siteConfig.hero.cta.primary)}
@@ -118,10 +118,10 @@ export function Hero() {
             strength={0.3}
             href="#contact"
             className={cn(
-              'rounded-full px-7 py-3.5',
-              'bg-transparent border border-white/20 text-white',
-              'font-heading text-[13px] font-medium uppercase tracking-wider',
-              'hover:border-lime-500/30 hover:text-lime-400 transition-all duration-200'
+              "rounded-full px-7 py-3.5",
+              "bg-transparent border border-white/20 text-white",
+              "font-heading text-[13px] font-medium uppercase tracking-wider",
+              "hover:border-lime-500/30 hover:text-lime-400 transition-all duration-200",
             )}
           >
             {t(siteConfig.hero.cta.secondary)}
@@ -157,5 +157,5 @@ export function Hero() {
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

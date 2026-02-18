@@ -34,7 +34,7 @@ export function Navigation() {
           'fixed top-0 left-0 right-0 z-40',
           'transition-all duration-500',
           scrolled
-            ? 'bg-[rgba(2,6,23,0.92)] backdrop-blur-xl border-b border-white/8 shadow-[0_4px_30px_rgba(0,0,0,0.5)]'
+            ? 'bg-[rgba(10,10,10,0.92)] backdrop-blur-xl border-b border-white/8 shadow-[0_4px_30px_rgba(0,0,0,0.5)]'
             : 'bg-transparent'
         )}
       >

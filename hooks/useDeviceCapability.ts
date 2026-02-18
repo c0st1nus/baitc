@@ -1,4 +1,4 @@
-'use client'
+ 'use client'
 import { useEffect, useState } from 'react'
 
 type Capability = 'low' | 'medium' | 'high'
@@ -23,7 +23,7 @@ function detectCapability(): Capability {
 }
 
 export function useDeviceCapability() {
-  const [capability, setCapability] = useState<Capability>('medium')
+  const [capability, setCapability] = useState<Capability | null>(null)
 
   useEffect(() => {
     setCapability(detectCapability())

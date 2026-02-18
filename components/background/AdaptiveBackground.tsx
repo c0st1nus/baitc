@@ -13,6 +13,11 @@ export function AdaptiveBackground() {
   const capability = useDeviceCapability()
   const { mode } = useMode()
 
+  // Loading state (or server-side): static background, no animation
+  if (capability === null) {
+    return <StaticBackground mode={mode} />
+  }
+
   // Low-end: only CSS gradient + grain
   if (capability === 'low') {
     return <StaticBackground mode={mode} />
