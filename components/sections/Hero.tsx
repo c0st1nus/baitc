@@ -43,16 +43,6 @@ export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center px-[clamp(1.5rem,5vw,4rem)]">
       <div className="max-w-[900px] mx-auto text-center flex flex-col items-center gap-6 pt-24 pb-16">
-        {/* Pretitle */}
-        <motion.div
-          {...fadeUp}
-          transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: 0 }}
-        >
-          <span className="text-micro text-lime-500">
-            {t(siteConfig.hero.pretitle)}
-          </span>
-        </motion.div>
-
         {/* Headline */}
         <motion.h1
           {...fadeUp}
@@ -66,19 +56,18 @@ export function Hero() {
                 <span
                   key={i}
                   className={cn(
-                    "inline-block bg-linear-to-r from-lime-400 to-emerald-500",
+                    "block bg-linear-to-r from-lime-400 to-emerald-500",
                     "bg-clip-text text-transparent",
                     "drop-shadow-[0_0_12px_rgba(34,197,94,0.4)]",
                     "transition-all duration-300",
                     isAnimating && "opacity-0 translate-y-1",
                   )}
-                  style={{ minWidth: "2ch" }}
                 >
                   {currentVerb}
                 </span>
               );
             }
-            return <span key={i}>{part}</span>;
+            return <span key={i}>{part.trim()}</span>;
           })}
         </motion.h1>
 

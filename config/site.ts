@@ -27,21 +27,14 @@ export const siteConfig = {
   },
 
   hero: {
-    pretitle: s([
-      "BAITC — Central Asia's AI & Blockchain Engine",
-      'BAITC — Движок ИИ и блокчейна Центральной Азии',
-      'BAITC — Орталық Азияның ЖИ және блокчейн қозғалтқышы',
-    ]),
     headline: s([
-      'We [Build] the Generative Nation.',
-      'Мы [строим] Генеративную Нацию.',
-      'Біз Генеративті [Ұлт] құрамыз.',
+      'Kazakhstan\'s [AI & Blockchain] Engine',
+      'Двигатель [ИИ и блокчейна] Казахстана.',
+      'Қазақстанның [ЖИ және блокчейн] қозғалтқышы',
     ]),
     verbs: [
-      s(['Build', 'строим', 'құрамыз']),
-      s(['Train', 'обучаем', 'оқытамыз']),
-      s(['Launch', 'запускаем', 'іске қосамыз']),
-      s(['Scale', 'масштабируем', 'дамытамыз']),
+      s(['AI', 'ИИ', 'ЖИ']),
+      s(['Blockchain', 'Блокчейна', 'Блокчейн']),
     ],
     subheadline: s([
       'From *50,000 civil servants* to *4,800 developers* — we design programs that transform how Kazakhstan thinks, builds, and governs with technology.',

@@ -87,7 +87,7 @@ export function InitiativesTimeline() {
                 
                 {/* Sticky Year Header */}
                 <div className="sticky top-24 z-20 flex md:justify-center pl-0 md:pl-0 mb-12 pointer-events-none">
-                  <div className="bg-[#0a0a0a]/80 backdrop-blur-md border border-white/10 px-6 py-2 rounded-full shadow-xl">
+                  <div className="bg-obsidian/80 backdrop-blur-md border border-white/10 px-6 py-2 rounded-full shadow-xl">
                     <span className="font-mono text-2xl md:text-3xl font-bold bg-linear-to-r from-white to-slate-400 bg-clip-text text-transparent">
                       {year}
                     </span>
@@ -108,7 +108,7 @@ export function InitiativesTimeline() {
                        return (
                         <div key={`${item.title[0]}-${index}`} className="relative">
                             {/* Dot on the line */}
-                            <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-8 w-4 h-4 rounded-full bg-[#0a0a0a] border-2 border-lime-500 z-10 shadow-[0_0_10px_rgba(34,197,94,0.5)] translate-x-[-7.5px]" />
+                            <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-8 w-4 h-4 rounded-full bg-obsidian border-2 border-lime-500 z-10 shadow-[0_0_10px_rgba(34,197,94,0.5)] translate-x-[-7.5px]" />
 
                             <div className={cn(
                                 "flex flex-col md:flex-row gap-8 md:gap-0 md:justify-between pt-2 pl-12 md:pl-0",

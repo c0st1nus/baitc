@@ -25,7 +25,7 @@ export function Footer() {
       </div>
 
       {/* Main footer */}
-      <div className="bg-[#0a0a0a] py-16">
+      <div className="bg-obsidian py-16">
         <div className="max-w-[1280px] mx-auto px-[clamp(1.5rem,5vw,4rem)] grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
           <div>
