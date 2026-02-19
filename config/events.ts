@@ -29,8 +29,7 @@ export const events = [
       { value: "2025", label: s(["launch", "запуск", "іске қосу"]) },
       { value: "1000+", label: s(["participants", "участников", "қатысушы"]) },
     ],
-    image:
-      "https://placehold.co/600x400/22c55e/ffffff?text=Meta+Llama+Accelerator",
+    image: "/images/events/meta-llama-accelerator/1.avif",
     partners: [
       "meta",
       "ai_digital_ministry",
@@ -67,7 +66,7 @@ export const events = [
       { value: "20", label: s(["cities", "городов", "қала"]) },
       { value: "370+", label: s(["projects", "проектов", "жоба"]) },
     ],
-    image: "https://placehold.co/600x400/22c55e/ffffff?text=Decentrathon+4.0",
+    image: "/images/events/decentrathon-4/1.avif",
     partners: [
       "astana_hub",
       "indrive",
@@ -103,7 +102,7 @@ export const events = [
       },
       { value: "352", label: s(["projects", "проектов", "жоба"]) },
     ],
-    image: "https://placehold.co/600x400/22c55e/ffffff?text=Decentrathon+3.0",
+    image: "/images/events/decentrathon-3/1.avif",
     partners: [
       "astana_hub",
       "mastercard",
@@ -143,7 +142,7 @@ export const events = [
         label: s(["video lectures", "видеолекций", "бейнедәрістер"]),
       },
     ],
-    image: "https://placehold.co/600x400/22c55e/ffffff?text=AI+Qyzmet",
+    image: "/images/events/ai-qyzmet/1.avif",
     partners: ["ai_digital_ministry", "adgs", "agu"] satisfies PartnerId[],
   },
   {
@@ -172,7 +171,7 @@ export const events = [
         label: s(["prize fund", "призовой фонд", "жүлде қоры"]),
       },
     ],
-    image: "https://placehold.co/600x400/22c55e/ffffff?text=Decentrathon+2.0",
+    image: "/images/events/decentrathon-2/1.avif",
     partners: ["astana_hub", "quantum_black", "ogames"] satisfies PartnerId[],
   },
   {
@@ -194,7 +193,7 @@ export const events = [
       { value: "3,000+", label: s(["learners", "учеников", "оқушы"]) },
       { value: "Free", label: s(["access", "доступ", "қол жетімділік"]) },
     ],
-    image: "https://placehold.co/600x400/22c55e/ffffff?text=AI+People",
+    image: "/images/events/ai-people/1.avif",
     partners: ["astana_hub", "ai_digital_ministry"] satisfies PartnerId[],
   },
   {
@@ -221,7 +220,7 @@ export const events = [
         label: s(["prize fund", "призовой фонд", "жүлде қоры"]),
       },
     ],
-    image: "https://placehold.co/600x400/22c55e/ffffff?text=Decentrathon+1.0",
+    image: "/images/events/decentrathon-1/1.avif",
     partners: ["astana_hub", "bnb_chain"] satisfies PartnerId[],
   },
   {
@@ -247,8 +246,7 @@ export const events = [
       { value: "200", label: s(["builders", "разработчиков", "әзірлеуші"]) },
       { value: "6", label: s(["months", "месяцев", "ай"]) },
     ],
-    image:
-      "https://placehold.co/600x400/22c55e/ffffff?text=BNB+Chain+Zero2Hero",
+    image: "/images/events/bnb-zero2hero/1.avif",
     partners: ["bnb_chain"] satisfies PartnerId[],
   },
   {
@@ -301,8 +299,7 @@ export const events = [
         value: "22",
       },
     ],
-    image:
-      "https://placehold.co/600x400/22c55e/ffffff?text=University+Outreach",
+    image: "/images/events/university-outreach/1.avif",
     partners: ["astana_hub", "mnvo", "npck", "binance"] satisfies PartnerId[],
   },
 ] as const;

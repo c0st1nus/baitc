@@ -6,8 +6,7 @@ import { cn } from "@/lib/utils";
 
 export function Footer() {
   const { t } = useLang();
-  const { tagline, legal, ticker, copyright, socials, contact } =
-    siteConfig.footer;
+  const { tagline, legal, copyright, socials, contact } = siteConfig.footer;
 
   return (
     <footer className="relative mt-16">

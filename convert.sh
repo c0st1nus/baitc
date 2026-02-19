@@ -34,7 +34,7 @@ for file in *.{png,avif}; do
                    "${filename}.webp"
             ;;
         *)
-            ffmpeg -i "$file" -c:v libwebp -q:v 80 -y \
+            ffmpeg -i "$file" -c:v libwebp -q:v 100 -y \
                    -hide_banner -loglevel error \
                    "${filename}.webp"
             ;;
