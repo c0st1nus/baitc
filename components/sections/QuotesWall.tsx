@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { SmartText } from "@/components/ui/SmartText";
+import { type Quote, quotes } from "@/config/quotes";
 import { siteConfig } from "@/config/site";
 import { useLang } from "@/context/LangContext";
 import { cn } from "@/lib/utils";
@@ -11,8 +12,6 @@ const fadeUp = {
   whileInView: { opacity: 1, y: 0 },
   viewport: { once: true, margin: "-80px" as const },
 };
-
-type Quote = (typeof siteConfig.marquee.quotes)[number];
 
 function QuoteCard({
   q,
@@ -70,7 +69,7 @@ function QuoteCard({
 export function QuotesWall() {
   const { t } = useLang();
   const { label, headline } = siteConfig.quotes;
-  const quotes = siteConfig.marquee.quotes;
+  const quotesList = quotes;
 
   return (
     <section className="py-[clamp(5rem,10vw,10rem)]">
@@ -89,7 +88,7 @@ export function QuotesWall() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {quotes.map((q, i) => (
+          {quotesList.map((q, i) => (
             <QuoteCard key={i} q={q} index={i} t={t} />
           ))}
         </div>

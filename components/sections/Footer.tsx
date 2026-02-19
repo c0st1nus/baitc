@@ -11,23 +11,6 @@ export function Footer() {
 
   return (
     <footer className="relative mt-16">
-      {/* News ticker */}
-      <div className="w-full overflow-hidden border-t border-lime-500/10 bg-[rgba(34,197,94,0.05)] py-2">
-        <div
-          className="flex gap-12 animate-marquee whitespace-nowrap"
-          style={{ width: "max-content" }}
-        >
-          {[...ticker, ...ticker, ...ticker].map((item, i) => (
-            <span
-              key={i}
-              className="font-mono text-[11px] text-lime-500 shrink-0"
-            >
-              {item}
-            </span>
-          ))}
-        </div>
-      </div>
-
       {/* Main footer */}
       <div className="bg-obsidian py-16">
         <div className="max-w-[1280px] mx-auto px-[clamp(1.5rem,5vw,4rem)] grid grid-cols-1 md:grid-cols-3 gap-12">

@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { SmartText } from "@/components/ui/SmartText";
+import { type PartnerId, partners } from "@/config/partners";
 import { siteConfig } from "@/config/site";
 import { useLang } from "@/context/LangContext";
 import { cn } from "@/lib/utils";
@@ -48,10 +49,7 @@ export function PartnersSection() {
               </h3>
               <div className="relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 md:gap-8 lg:gap-10 p-4">
                 {cat.logos.map((companyKey, li) => {
-                  const company =
-                    siteConfig.companies[
-                      companyKey as keyof typeof siteConfig.companies
-                    ];
+                  const company = partners[companyKey as PartnerId];
 
                   if (!company) return null;
 

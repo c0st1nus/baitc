@@ -4,6 +4,8 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import { useMemo, useState } from "react";
 import { SmartText } from "@/components/ui/SmartText";
+import { events } from "@/config/events";
+import { type PartnerId, partners } from "@/config/partners";
 import { siteConfig } from "@/config/site";
 import { useLang } from "@/context/LangContext";
 import { cn } from "@/lib/utils";
@@ -18,7 +20,8 @@ export function InitiativesTimeline() {
   const { t } = useLang();
   const [filter, setFilter] = useState<"all" | "blockchain" | "ai">("all");
 
-  const { label, headline, filters, items } = siteConfig.initiatives;
+  const { label, headline, filters } = siteConfig.initiatives;
+  const items = events;
 
   // Filter and Sort (Newest first)
   const filteredItems = useMemo(() => {
@@ -30,7 +33,7 @@ export function InitiativesTimeline() {
     // Items are technically ordered by year/time in site.ts (2022 -> 2025).
     // We want newest first for the timeline (2025 -> 2022).
     return res.reverse();
-  }, [filter, items]);
+  }, [filter]);
 
   // Group by year for sticky headers
   const groupedItems = useMemo(() => {
@@ -228,9 +231,7 @@ export function InitiativesTimeline() {
                                 <div className="flex flex-wrap justify-center gap-3 md:gap-4">
                                   {item.partners.map((companyKey, pIdx) => {
                                     const company =
-                                      siteConfig.companies[
-                                        companyKey as keyof typeof siteConfig.companies
-                                      ];
+                                      partners[companyKey as PartnerId];
 
                                     if (!company) return null;
 
