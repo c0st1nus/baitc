@@ -3,10 +3,19 @@ import { useEffect, useState } from 'react'
 
 type Capability = 'low' | 'medium' | 'high'
 
+interface NavigatorWithExtensions extends Navigator {
+  deviceMemory?: number
+  connection?: {
+    saveData?: boolean
+    effectiveType?: string
+  }
+}
+
 function detectCapability(): Capability {
+  const nav = navigator as NavigatorWithExtensions
   const cpuCores = navigator.hardwareConcurrency ?? 2
-  const memory = (navigator as any).deviceMemory ?? 2
-  const connection = (navigator as any).connection
+  const memory = nav.deviceMemory ?? 2
+  const connection = nav.connection
   const isSaveData = connection?.saveData === true
   const effectiveType = connection?.effectiveType
   const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -26,6 +35,7 @@ export function useDeviceCapability() {
   const [capability, setCapability] = useState<Capability | null>(null)
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setCapability(detectCapability())
   }, [])
 

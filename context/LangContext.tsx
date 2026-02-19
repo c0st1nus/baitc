@@ -18,6 +18,7 @@ export function LangProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const saved = localStorage.getItem('baitc-lang')
     if (saved === '0' || saved === '1' || saved === '2') {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setLangState(Number(saved) as Lang)
       return
     }

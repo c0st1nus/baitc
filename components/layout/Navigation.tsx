@@ -1,5 +1,6 @@
 'use client'
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
 import { useLang } from '@/context/LangContext'
@@ -40,9 +41,9 @@ export function Navigation() {
       >
         <nav className="mx-auto max-w-[1280px] px-[clamp(1.5rem,5vw,4rem)] h-16 flex items-center justify-between">
           {/* Logo */}
-          <a href="/" className="font-heading text-white font-bold text-lg tracking-tight">
+          <Link href="/" className="font-heading text-white font-bold text-lg tracking-tight">
             BAITC
-          </a>
+          </Link>
 
           {/* Desktop Nav Links */}
           <div className="hidden md:flex items-center gap-8">

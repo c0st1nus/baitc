@@ -15,7 +15,7 @@ const fadeUp = {
 }
 
 export function InitiativesTimeline() {
-  const { lang, t } = useLang()
+  const { t } = useLang()
   const [filter, setFilter] = useState<'all' | 'blockchain' | 'ai'>('all')
 
   const { label, headline, filters, items } = siteConfig.initiatives
