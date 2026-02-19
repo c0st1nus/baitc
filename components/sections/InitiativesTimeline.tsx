@@ -88,7 +88,7 @@ export function InitiativesTimeline() {
         {/* Timeline */}
         <div className="relative max-w-5xl mx-auto">
           {/* Central Line */}
-          <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-12 bottom-0 w-px bg-linear-to-b from-lime-500/50 via-lime-500/20 to-transparent" />
+          <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-12 bottom-0 w-[3.5px] bg-linear-to-b from-lime-500/50 via-lime-500/20 to-transparent" />
 
           <div className="space-y-24">
             {years.map((year) => (
@@ -121,7 +121,7 @@ export function InitiativesTimeline() {
                         className="relative"
                       >
                         {/* Dot on the line */}
-                        <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-8 w-4 h-4 rounded-full bg-obsidian border-2 border-lime-500 z-10 shadow-[0_0_10px_rgba(34,197,94,0.5)] translate-x-[-7.5px]" />
+                        <div className="absolute left-4 md:left-1/2 md:-translate-x-1/2 top-8 w-4 h-4 rounded-full bg-obsidian border-2 border-lime-500 z-10 shadow-[0_0_10px_rgba(34,197,94,0.5)] translate-x-[-7px]" />
 
                         <div
                           className={cn(
