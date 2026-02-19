@@ -1,12 +1,13 @@
-'use client'
-import { cn } from '@/lib/utils'
-import { useLang } from '@/context/LangContext'
-import { siteConfig } from '@/config/site'
-import { SmartText } from '@/components/ui/SmartText'
+"use client";
+import { SmartText } from "@/components/ui/SmartText";
+import { siteConfig } from "@/config/site";
+import { useLang } from "@/context/LangContext";
+import { cn } from "@/lib/utils";
 
 export function Footer() {
-  const { t } = useLang()
-  const { tagline, legal, ticker, copyright, socials, contact } = siteConfig.footer
+  const { t } = useLang();
+  const { tagline, legal, ticker, copyright, socials, contact } =
+    siteConfig.footer;
 
   return (
     <footer className="relative mt-16">
@@ -14,10 +15,13 @@ export function Footer() {
       <div className="w-full overflow-hidden border-t border-lime-500/10 bg-[rgba(34,197,94,0.05)] py-2">
         <div
           className="flex gap-12 animate-marquee whitespace-nowrap"
-          style={{ width: 'max-content' }}
+          style={{ width: "max-content" }}
         >
           {[...ticker, ...ticker, ...ticker].map((item, i) => (
-            <span key={i} className="font-mono text-[11px] text-lime-500 shrink-0">
+            <span
+              key={i}
+              className="font-mono text-[11px] text-lime-500 shrink-0"
+            >
               {item}
             </span>
           ))}
@@ -29,7 +33,9 @@ export function Footer() {
         <div className="max-w-[1280px] mx-auto px-[clamp(1.5rem,5vw,4rem)] grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Brand */}
           <div>
-            <span className="text-2xl font-heading font-bold text-white tracking-tight">BAITC</span>
+            <span className="text-2xl font-heading font-bold text-white tracking-tight">
+              BAITC
+            </span>
             <SmartText
               text={t(tagline)}
               as="p"
@@ -43,9 +49,9 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className={cn(
-                    'w-10 h-10 rounded-full flex items-center justify-center',
-                    'bg-white/5 text-slate-400 hover:text-white hover:bg-white/10',
-                    'transition-all duration-200 text-sm font-medium',
+                    "w-10 h-10 rounded-full flex items-center justify-center",
+                    "bg-white/5 text-slate-400 hover:text-white hover:bg-white/10",
+                    "transition-all duration-200 text-sm font-medium",
                   )}
                 >
                   {s.label.charAt(0)}
@@ -78,13 +84,23 @@ export function Footer() {
               Legal
             </h4>
             <div className="space-y-1">
-              <p className="font-mono text-[12px] text-slate-500">{legal.name}</p>
-              <p className="font-mono text-[12px] text-slate-500">{legal.bin}</p>
-              <p className="font-mono text-[12px] text-slate-500">{t(legal.address)}</p>
+              <p className="font-mono text-[12px] text-slate-500">
+                {legal.name}
+              </p>
+              <p className="font-mono text-[12px] text-slate-500">
+                {legal.bin}
+              </p>
+              <p className="font-mono text-[12px] text-slate-500">
+                {t(legal.address)}
+              </p>
             </div>
             <div className="mt-4 space-y-1">
-              <p className="font-mono text-[12px] text-slate-400">{contact.email}</p>
-              <p className="font-mono text-[12px] text-slate-400">{contact.telegram}</p>
+              <p className="font-mono text-[12px] text-slate-400">
+                {contact.email}
+              </p>
+              <p className="font-mono text-[12px] text-slate-400">
+                {contact.telegram}
+              </p>
             </div>
           </div>
         </div>
@@ -92,9 +108,11 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="max-w-[1280px] mx-auto px-[clamp(1.5rem,5vw,4rem)] mt-12 pt-6 border-t border-white/6 flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-[12px] text-slate-600">{copyright}</p>
-          <p className="text-[12px] text-slate-700 font-mono">Building a generative nation.</p>
+          <p className="text-[12px] text-slate-700 font-mono">
+            Building a generative nation.
+          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

@@ -1,11 +1,11 @@
 "use client";
-import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
-import { useLang } from "@/context/LangContext";
-import { siteConfig } from "@/config/site";
-import { SmartText } from "@/components/ui/SmartText";
+import { useCallback, useEffect, useState } from "react";
 import { MagneticButton } from "@/components/ui/MagneticButton";
+import { SmartText } from "@/components/ui/SmartText";
+import { siteConfig } from "@/config/site";
+import { useLang } from "@/context/LangContext";
+import { cn } from "@/lib/utils";
 
 const VERB_INTERVAL = 2500;
 

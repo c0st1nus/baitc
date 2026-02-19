@@ -1,47 +1,50 @@
-'use client'
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion'
-import { cn } from '@/lib/utils'
-import { useLang } from '@/context/LangContext'
-import { siteConfig } from '@/config/site'
-import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher'
-import { MagneticButton } from '@/components/ui/MagneticButton'
+"use client";
+import { AnimatePresence, motion } from "framer-motion";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
+import { MagneticButton } from "@/components/ui/MagneticButton";
+import { siteConfig } from "@/config/site";
+import { useLang } from "@/context/LangContext";
+import { cn } from "@/lib/utils";
 
 export function Navigation() {
-  const { t } = useLang()
-  const [scrolled, setScrolled] = useState(false)
-  const [mobileOpen, setMobileOpen] = useState(false)
+  const { t } = useLang();
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50)
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   // Close mobile menu on resize to desktop
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth >= 768) setMobileOpen(false)
-    }
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
+      if (window.innerWidth >= 768) setMobileOpen(false);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <>
       <header
         className={cn(
-          'fixed top-0 left-0 right-0 z-40',
-          'transition-all duration-500',
+          "fixed top-0 left-0 right-0 z-40",
+          "transition-all duration-500",
           scrolled
-            ? 'bg-[rgba(10,10,10,0.92)] backdrop-blur-xl border-b border-white/8 shadow-[0_4px_30px_rgba(0,0,0,0.5)]'
-            : 'bg-transparent'
+            ? "bg-[rgba(10,10,10,0.92)] backdrop-blur-xl border-b border-white/8 shadow-[0_4px_30px_rgba(0,0,0,0.5)]"
+            : "bg-transparent",
         )}
       >
         <nav className="mx-auto max-w-[1280px] px-[clamp(1.5rem,5vw,4rem)] h-16 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="font-heading text-white font-bold text-lg tracking-tight">
+          <Link
+            href="/"
+            className="font-heading text-white font-bold text-lg tracking-tight"
+          >
             BAITC
           </Link>
 
@@ -52,8 +55,8 @@ export function Navigation() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  'font-heading text-[13px] font-medium uppercase tracking-wider',
-                  'text-slate-400 hover:text-white transition-colors duration-200'
+                  "font-heading text-[13px] font-medium uppercase tracking-wider",
+                  "text-slate-400 hover:text-white transition-colors duration-200",
                 )}
               >
                 {t(link.label)}
@@ -68,10 +71,10 @@ export function Navigation() {
               strength={0.3}
               href="#contact"
               className={cn(
-                'rounded-full px-5 py-2',
-                'bg-lime-500 text-black',
-                'font-heading text-[13px] font-medium uppercase tracking-wider',
-                'hover:bg-lime-400 transition-colors duration-200'
+                "rounded-full px-5 py-2",
+                "bg-lime-500 text-black",
+                "font-heading text-[13px] font-medium uppercase tracking-wider",
+                "hover:bg-lime-400 transition-colors duration-200",
               )}
             >
               {t(siteConfig.nav.cta)}
@@ -82,22 +85,22 @@ export function Navigation() {
           <button
             className="md:hidden relative z-50 w-8 h-8 flex items-center justify-center"
             onClick={() => {
-              setMobileOpen(!mobileOpen)
-              if ('vibrate' in navigator) navigator.vibrate(5)
+              setMobileOpen(!mobileOpen);
+              if ("vibrate" in navigator) navigator.vibrate(5);
             }}
             aria-label="Toggle menu"
           >
             <div className="flex flex-col gap-1.5">
               <span
                 className={cn(
-                  'block w-5 h-[1.5px] bg-white transition-all duration-300',
-                  mobileOpen && 'rotate-45 translate-y-[4.5px]'
+                  "block w-5 h-[1.5px] bg-white transition-all duration-300",
+                  mobileOpen && "rotate-45 translate-y-[4.5px]",
                 )}
               />
               <span
                 className={cn(
-                  'block w-5 h-[1.5px] bg-white transition-all duration-300',
-                  mobileOpen && '-rotate-45 -translate-y-[4.5px]'
+                  "block w-5 h-[1.5px] bg-white transition-all duration-300",
+                  mobileOpen && "-rotate-45 -translate-y-[4.5px]",
                 )}
               />
             </div>
@@ -140,5 +143,5 @@ export function Navigation() {
         )}
       </AnimatePresence>
     </>
-  )
+  );
 }

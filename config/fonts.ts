@@ -1,4 +1,4 @@
-import { Inter, Inter_Tight, IBM_Plex_Mono } from "next/font/google";
+import { IBM_Plex_Mono, Inter, Inter_Tight } from "next/font/google";
 
 export const interTight = Inter_Tight({
   subsets: ["latin", "cyrillic"],

@@ -1,15 +1,15 @@
-import { AdaptiveBackground } from '@/components/background/AdaptiveBackground'
-import { Navigation } from '@/components/layout/Navigation'
-import { Hero } from '@/components/sections/Hero'
-import { MarqueeSection } from '@/components/sections/MarqueeSection'
-import { ImpactDashboard } from '@/components/sections/ImpactDashboard'
-import { EcosystemPillars } from '@/components/sections/EcosystemPillars'
-import { Methodology } from '@/components/sections/Methodology'
-import { InitiativesTimeline } from '@/components/sections/InitiativesTimeline'
-import { QuotesWall } from '@/components/sections/QuotesWall'
-import { PartnersSection } from '@/components/sections/PartnersSection'
-import { ContactSection } from '@/components/sections/ContactSection'
-import { Footer } from '@/components/sections/Footer'
+import { AdaptiveBackground } from "@/components/background/AdaptiveBackground";
+import { Navigation } from "@/components/layout/Navigation";
+import { ContactSection } from "@/components/sections/ContactSection";
+import { EcosystemPillars } from "@/components/sections/EcosystemPillars";
+import { Footer } from "@/components/sections/Footer";
+import { Hero } from "@/components/sections/Hero";
+import { ImpactDashboard } from "@/components/sections/ImpactDashboard";
+import { InitiativesTimeline } from "@/components/sections/InitiativesTimeline";
+import { MarqueeSection } from "@/components/sections/MarqueeSection";
+import { Methodology } from "@/components/sections/Methodology";
+import { PartnersSection } from "@/components/sections/PartnersSection";
+import { QuotesWall } from "@/components/sections/QuotesWall";
 
 export default function Home() {
   return (
@@ -29,5 +29,5 @@ export default function Home() {
       </main>
       <Footer />
     </>
-  )
+  );
 }

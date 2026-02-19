@@ -1,36 +1,42 @@
-'use client'
-import { createContext, useContext, useState, useCallback, useEffect } from 'react'
+"use client";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useState,
+} from "react";
 
-type Mode = 'blockchain' | 'ai' | 'neutral'
+type Mode = "blockchain" | "ai" | "neutral";
 
 interface ModeContextType {
-  mode: Mode
-  setMode: (m: Mode) => void
+  mode: Mode;
+  setMode: (m: Mode) => void;
 }
 
-const ModeContext = createContext<ModeContextType | null>(null)
+const ModeContext = createContext<ModeContextType | null>(null);
 
 export function ModeProvider({ children }: { children: React.ReactNode }) {
-  const [mode, setModeState] = useState<Mode>('neutral')
+  const [mode, setModeState] = useState<Mode>("neutral");
 
   const setMode = useCallback((m: Mode) => {
-    setModeState(m)
-  }, [])
+    setModeState(m);
+  }, []);
 
   // Sync data-mode attribute on <body> for CSS transitions
   useEffect(() => {
-    document.body.setAttribute('data-mode', mode)
-  }, [mode])
+    document.body.setAttribute("data-mode", mode);
+  }, [mode]);
 
   return (
     <ModeContext.Provider value={{ mode, setMode }}>
       {children}
     </ModeContext.Provider>
-  )
+  );
 }
 
 export const useMode = () => {
-  const ctx = useContext(ModeContext)
-  if (!ctx) throw new Error('useMode must be used within ModeProvider')
-  return ctx
-}
+  const ctx = useContext(ModeContext);
+  if (!ctx) throw new Error("useMode must be used within ModeProvider");
+  return ctx;
+};

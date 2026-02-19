@@ -1,11 +1,11 @@
 "use client";
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { useState } from "react";
+import { SmartText } from "@/components/ui/SmartText";
+import { siteConfig } from "@/config/site";
 import { useLang } from "@/context/LangContext";
 import { useMode } from "@/context/ModeContext";
-import { siteConfig } from "@/config/site";
-import { SmartText } from "@/components/ui/SmartText";
+import { cn } from "@/lib/utils";
 
 const fadeUp = {
   initial: { opacity: 0, y: 24 },
