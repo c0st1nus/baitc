@@ -15,7 +15,163 @@ export const siteConfig = {
       'Қазақстандағы ЖИ және блокчейн білімі, зерттеу және инновациясының жетекші R&D орталығы.',
     ]),
   },
-
+  companies: {
+    meta: {
+      title: ["Meta", "Meta", "Meta"],
+      site: "https://about.meta.com",
+      logo: "/images/logos/logo_meta.webp"
+    },
+    mastercard: {
+      title: ["Mastercard", "Mastercard", "Mastercard"],
+      site: "https://www.mastercard.com",
+      logo: "/images/logos/logo_mastercard.webp"
+    },
+    binance: {
+      title: ["Binance", "Binance", "Binance"],
+      site: "https://www.binance.com",
+      logo: "/images/logos/logo_binance.webp"
+    },
+    solana: {
+      title: ["Solana", "Solana", "Solana"],
+      site: "https://solana.com",
+      logo: "/images/logos/logo_solana.webp"
+    },
+    ton: {
+      title: ["TON", "TON", "TON"],
+      site: "https://ton.org",
+      logo: "/images/logos/logo_ton.webp"
+    },
+    indrive: {
+      title: ["InDrive", "InDrive", "InDrive"],
+      site: "https://indrive.com",
+      logo: "/images/logos/logo_indrive.webp"
+    },
+    bybit: {
+      title: ["Bybit", "Bybit", "Bybit"],
+      site: "https://www.bybit.com",
+      logo: "/images/logos/logo_bybit.webp"
+    },
+    bnb_chain: {
+      title: ["BNB Chain", "BNB Chain", "BNB Chain"],
+      site: "https://www.bnbchain.org",
+      logo: "/images/logos/logo_bnb_chain.webp"
+    },
+    quantum_black: {
+      title: ["Quantum Black", "Quantum Black", "Quantum Black"],
+      site: "https://www.mckinsey.com/capabilities/quantumblack",
+      logo: "/images/logos/logo_quantum.webp"
+    },
+    chainalysis: {
+      title: ["Chainalysis", "Chainalysis", "Chainalysis"],
+      site: "https://www.chainalysis.com",
+      logo: "/images/logos/logo_chainanalysis.webp"
+    },
+    grand_mobile: {
+      title: ["Grand Mobile", "Grand Mobile", "Grand Mobile"],
+      site: "https://grandmobile.kz",
+      logo: "/images/logos/logo_grandmobile.webp"
+    },
+    ogames: {
+      title: ["Ogames", "Ogames", "Ogames"],
+      site: "https://ogames.kz",
+      logo: "/images/logos/logo_ogames.webp"
+    },
+    superteam: {
+      title: ["Superteam", "Superteam", "Superteam"],
+      site: "https://superteam.fun",
+      logo: "/images/logos/logo_superteam.webp"
+    },
+    activ: {
+      title: ["Activ", "Activ", "Activ"],
+      site: "https://activ.kz",
+      logo: "/images/logos/logo_activ.webp"
+    },
+    bcc_hub: {
+      title: ["BCC Hub", "BCC Hub", "BCC Hub"],
+      site: "https://hub.bcc.kz",
+      logo: "/images/logos/logo_bcc_hub.webp"
+    },
+    afm: {
+      title: ["Agency for Financial Monitoring", "Агенство по Финансовому Мониторингу", "Қаржы мониторингі агенттігі"],
+      site: "https://websfm.kz/",
+      logo: "/images/logos/logo_afm.webp"
+    },
+    aidm: {
+      title: ["Ministry of Digital Development and AI", "Министерство Цифрового Развития и ИИ", "Цифрлық даму және ЖИ министрлігі"],
+      site: null,
+      logo: "/images/logos/logo_aidm.webp"
+    },
+    alem_ai: {
+      title: ["Alem AI", "Alem AI", "Alem AI"],
+      site: "https://alemai.kz",
+      logo: "/images/logos/logo_alem-ai.webp"
+    },
+    agds: {
+      title: ["Agency for Civil Service Affairs", "Агентство по делам государственной службы", "Мемлекеттік қызмет істері агенттігі"],
+      site: null,
+      logo: "/images/logos/logo_adgs.webp"
+    },
+    nitec: {
+      title: ["National Institute of Technology", "Национальный институт технологий", "Ұлттық технологиялар институты"],
+      site: "https://nitec.kz",
+      logo: "/images/logos/logo_nitec.webp"
+    },
+    agu: {
+      title: ["AGU", "AGU", "AGU"],
+      site: null,
+      logo: "/images/logos/logo_agu.webp"
+    },
+    astana_hub: {
+      title: ["Astana Hub", "Astana Hub", "Astana Hub"],
+      site: "https://astanahub.com",
+      logo: "/images/logos/logo_ahub.webp"
+    },
+    astana_inovations: {
+      title: ["Astana Innovations", "Astana Innovations", "Astana Innovations"],
+      site: "https://astanahub.com",
+      logo: "/images/logos/logo_astanainnovations.webp"
+    },
+    national_bank: {
+      title: ["National Bank", "Национальный Банк", "Ұлттық Банкі"],
+      site: "https://nationalbank.kz",
+      logo: "/images/logos/logo_national_bank.webp"
+    },
+    mnvo: {
+      title: ["Ministry of Information and Communications", "Министерство информации и коммуникаций РК", "Қазақстан Республикасының Ақпарат және коммуникациялар министрлігі"],
+      site: "https://www.gov.kz/memleket/entities/msn",
+      logo: "/images/logos/logo_mnvo.webp"
+    },
+    npck: {
+      title: ["National Payment Corporation of Kazakhstan", "Национальная платежная корпорация Казахстана", "Қазақстан Республикасының Ұлттық төлем корпорациясы"],
+      site: "https://npck.kz/",
+      logo: "/images/logos/logo_npck.svg"
+    },
+    tumo: {
+      title: ["TUMO", "TUMO", "TUMO"],
+      site: "https://astana.tumo.kz/",
+      logo: "/images/logos/logo_tumo.webp"
+    },
+    tomorow_school: {
+      title: ["Tomorow School", "Tomorow School", "Tomorow School"],
+      site: "https://tomorrow-school.ai/",
+      logo: "/images/logos/logo_tomorrow-school.webp"
+    },
+    kazakhtelecom: {
+      title: ["Kazakhtelecom", "Казактелеком", "Қазақтелеком"],
+      site: "https://telecom.kz/",
+      logo: "/images/logos/logo_kazakhtelecom.webp"
+    },
+    centrecredit: {
+      title: ["Bank CentreCredit", "Банк ЦентрКредит", "Банк ЦентрКредит"],
+      site: "https://www.bcc.kz/kz/",
+      logo: "/images/logos/logo_bcc.webp"
+    },
+    kpmg: {
+      title: ["KPMG", "KPMG", "KPMG"],
+      site: null,
+      logo: "/images/logos/logo_kpmg.webp"
+    }
+  },
   nav: {
     links: [
       { href: '#initiatives', label: s(['Programs', 'Программы', 'Бағдарламалар']) },

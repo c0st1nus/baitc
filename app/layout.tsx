@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
-import { interTight, inter, ibmPlexMono } from './fonts'
+import { interTight, inter, ibmPlexMono } from '../config/fonts'
 import { LangProvider } from '@/context/LangContext'
 import { ModeProvider } from '@/context/ModeContext'
-import './globals.css'
+import '@/styles/globals.css'
 
 export const metadata: Metadata = {
   title: {
