@@ -221,29 +221,46 @@ export function InitiativesTimeline() {
 
                             {/* Partners */}
                             {item.partners && item.partners.length > 0 && (
-                              <div
-                                className={cn(
-                                  "flex flex-wrap gap-2 items-center",
-                                  !isRight
-                                    ? "md:justify-end"
-                                    : "md:justify-start",
-                                )}
-                              >
-                                <span className="text-xs text-slate-600 font-mono uppercase mr-2">
-                                  {t([
-                                    "Partners:",
-                                    "Партнеры:",
-                                    "Серіктестер:",
-                                  ])}
-                                </span>
-                                {item.partners.map((p, pIdx) => (
-                                  <span
-                                    key={pIdx}
-                                    className="text-xs text-slate-400 bg-white/5 px-2 py-1 rounded border border-white/5 hover:bg-white/10 transition-colors cursor-default"
-                                  >
-                                    {p}
-                                  </span>
-                                ))}
+                              <div className="pt-2">
+                                <p className="text-xs text-muted-foreground mb-3">
+                                  {t(["Partners", "Партнеры", "Серіктестер"])}
+                                </p>
+                                <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+                                  {item.partners.map((companyKey, pIdx) => {
+                                    const company =
+                                      siteConfig.companies[
+                                        companyKey as keyof typeof siteConfig.companies
+                                      ];
+
+                                    if (!company) return null;
+
+                                    return (
+                                      <a
+                                        key={pIdx}
+                                        href={company.site || "#"}
+                                        target={
+                                          company.site ? "_blank" : undefined
+                                        }
+                                        rel={
+                                          company.site
+                                            ? "noopener noreferrer"
+                                            : undefined
+                                        }
+                                        className="block cursor-pointer"
+                                      >
+                                        <div className="h-14 md:h-16 rounded-xl px-5 py-3 flex items-center justify-center overflow-hidden border border-white/10 hover:border-white/20 transition-all duration-300 bg-white/5 hover:bg-white/8">
+                                          <Image
+                                            src={company.logo}
+                                            alt={t(company.title)}
+                                            width={200}
+                                            height={80}
+                                            className="h-full w-auto max-w-28 md:max-w-32 object-contain transition-all duration-300 opacity-70 hover:opacity-100"
+                                          />
+                                        </div>
+                                      </a>
+                                    );
+                                  })}
+                                </div>
                               </div>
                             )}
 
